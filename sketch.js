@@ -22,10 +22,11 @@ function draw()
     stroke(0);
     s = "Complete Graph with " + v + " vertices";
     text(s,width/2,height*0.1);
+    //rect(width/2,height*0.05,width,height*0.1);
     translate(width/2,height/2);
     v = slider.value();
     var step = TWO_PI/v;
-    var r = height/2-height*0.12;
+    var r = min(height/2-height*0.12,width/2-width*0.12);
     var points = [];
     for(var i =0;i<TWO_PI;i+=step)
     {
